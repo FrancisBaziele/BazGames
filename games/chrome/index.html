@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>chrome</title>
+        <style type="text/css" media="all">
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Sans-Serif;
+}
+            canvas{
+   
+  background: #62E3FF;
+  transition: all 0.5s ;
+            }
+
+#player{
+  display: none;
+    background-color: red;
+    background: url("run.png");
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    
+	background-repeat: repeat;
+	background-size: cover;	
+
+
+}
+#enemy{
+      background: green;
+    width: 80px;
+    height: 40px;
+    z-index: 100;
+    position: absolute;
+    top: 550px;
+    left: 70px;
+
+     animation:  1.5s infinite linear;
+
+}
+   .jumpanima{
+
+    /* background: url("PicsArt_11-11-11.38.12.jpg");*/
+
+     animation: jump 0.5s;
+       }
+ @keyframes jump {
+   
+    30%{
+        left: 170px;
+    }
+     70%{
+         left: 170px;
+     }
+     100%{
+         left: 70px;
+     }
+ }
+
+
+@keyframes run {
+    from{
+        top: 570px;
+    }
+to{
+    top: -50px;
+}
+}
+
+
+.dialog{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%,-50%);
+  height: 50%;
+  padding: 1rem;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.5),
+              0 0 0 100vh rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#dialog_title{
+  text-transform: capitalize;
+  text-align: center;
+  color: maroon;
+  transform: rotate(90deg);
+}
+
+.dialog p{
+  text-align: center;
+  color: maroon;
+  font-weight: 500;
+  transform: rotate(90deg);
+}
+
+.dialog button{
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  border: 0;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, #E9722C, #D6A42C);
+  color: maroon;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  transform: rotate(90deg);
+}
+    </style>
+    </head>
+    <body>
+       
+<canvas>
+    
+</canvas>  
+
+<div id="player">
+</div>
+
+<div id="enemy">
+</div>
+
+    
+    <div class="dialog" id="dialog">
+      <button id="btn" type="button">Play</button>
+      <p id="p"></p>
+      <br />
+      <h1 id="dialog_title">Start Game</h1>
+    </div>
+  
+    </body>
+<script type="text/javascript" charset="utf-8" src= "app.js">
+    
+</script>
+
+</html>
+
+
+ 

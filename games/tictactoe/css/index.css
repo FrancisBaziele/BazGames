@@ -1,0 +1,96 @@
+:root{
+  --board-background:  #182830;
+  --cell-background: #203040;
+  --accent: #187840;
+  --text: #fff;
+  --border: #4F575F;
+}
+
+
+
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box !important;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Sans-Serif;
+  background: var(--board-background);
+}
+
+nav {
+  color: #fff;
+  padding: 1.5rem;
+  background: #0056c1ff;
+}
+
+.player{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.player p {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.player span{
+  opacity: 0.5;
+  padding: 2px;
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+ /*box-shadow: 0 0 0 1px var(--border);*/
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.container .cell{
+  
+  width: calc(200px / 3);
+  height: calc(200px / 3);
+  box-shadow: 0 0 2.5px 1px var(--border);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cell-background);
+}
+
+.container p{
+  font-size: 3rem;
+}
+
+.active{
+  opacity: 0.9 !important;
+  box-shadow: inset 0 0 5px -1px #0e94fc !important;
+}
+
+.winner{
+  display: none;
+  padding: 3rem;
+  text-align: center;
+  font-family: Sans-Serif;
+  font-size: 2rem;
+  color: #fff;
+  transition:  all 3s ease;
+}
+
+.animate_in{
+  display: block;
+  text-transform: capitalize;
+}

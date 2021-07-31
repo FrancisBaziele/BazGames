@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>ping pong</title>
+       
+<style type="text/css" media="all">
+      body{
+          padding: 0px;
+          margin: 0px;
+          
+      }
+      
+
+      #left{
+		height: 100%;
+		width: 50%;	 
+				 position: fixed;
+				 left: 0.5px;
+				 bottom: 0.5px;
+		
+		
+				}
+				
+#right{
+		height: 100%;
+		width: 50%;
+				 position: fixed;
+				 right: 0.5px;
+				 bottom: 0.5px;
+				 
+				} 
+
+
+canvas{
+     background-image: linear-gradient(#E9722C, #D6A42C);
+    background: url("background.jpg");
+    background-repeat: no-repeat;
+     background-size: top;
+
+}
+
+.dialog{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  padding: 1rem;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.5),
+              0 0 0 100vh rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#dialog_title{
+  text-transform: capitalize;
+  text-align: center;
+  color: maroon;
+}
+
+.dialog p{
+  text-align: center;
+  color: maroon;
+  font-weight: 500;
+}
+
+.dialog button{
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  border: 0;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, #E9722C, #D6A42C);
+  color: maroon;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+</style>
+    </head>
+    <body>
+        
+<div id="left">
+    
+</div>
+
+    <div id="right">
+        
+    </div>
+
+    <canvas>
+    </canvas>
+    
+    <div class="dialog" id="dialog">
+      <h1 id="dialog_title">Start Game</h1>
+      <p id="p"></p>
+      <button id="btn" type="button">Play</button>
+    </div>
+    </body>
+<script type="text/javascript" charset="utf-8" src="app.js">
+    
+</script>
+</html>
